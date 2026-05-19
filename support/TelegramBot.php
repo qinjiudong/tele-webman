@@ -12,7 +12,7 @@ class TelegramBot
     {
         $token = getenv('TELEGRAM_BOT_TOKEN');
         $baseUrl = "https://api.telegram.org/bot{$token}/";
-        $this->client = new Client(['base_uri' => $baseUrl, 'verify' => false]);
+        $this->client = new Client(['base_uri' => $baseUrl, 'verify' => false, 'http_errors' => false]);
     }
 
     /**
