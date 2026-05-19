@@ -14,7 +14,7 @@ class IndexController
 
     public function sendMessage(Request $request)
     {
-        $chatId = $request->input('chat_id');
+        $chatId = $request->input('chat_id', '-1003948380913');
         $text = $request->input('text');
         $parseMode = $request->input('parse_mode', 'html');
         $bot = new TelegramBot();
